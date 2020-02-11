@@ -33,11 +33,21 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        options: {
+          emitWarning: true,
+          configFile: "./.eslintrc.json"
+        }
+      },
+      {
+        test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
           presets: [
-            ["es2015", {"modules": false}],
+            ["es2015", { "modules": false }],
             "react",
           ],
           plugins: [
@@ -52,7 +62,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template:'template.ejs',
+      template: 'template.ejs',
       appMountId: 'react-app-root',
       title: 'React Help Queue',
       filename: resolve(__dirname, "build", "index.html"),

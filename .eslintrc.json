@@ -15,6 +15,7 @@
         "react"
     ],
     "rules": {
+        "react/jsx-key": 2,
         "react/jsx-uses-vars": 2,
         "react/jsx-uses-react": 2,
         "react/jsx-no-duplicate-props": 2,
@@ -46,5 +47,10 @@
             "error",
             "always"
         ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
