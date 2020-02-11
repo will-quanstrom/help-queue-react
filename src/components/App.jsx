@@ -1,14 +1,14 @@
-import React from 'react'
-import TicketList from './TicketList'
-import Header from './Header'
+import React from 'react';
+import TicketList from './TicketList';
+import Header from './Header';
 
-function App(){
+function App() {
   return (
     <div>
-      <Header/>
-      <TicketList/>
+      <Header />
+      <TicketList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
